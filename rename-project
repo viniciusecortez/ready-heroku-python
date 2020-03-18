@@ -1,0 +1,19 @@
+#!/bin/sh
+
+main(){
+    if [ ! -z $1 ] ; then
+        local o_name="${PWD##*/}"
+        local n_name=$1
+        sed -i "s/$o_name/$n_name/g" ./manage.py
+        sed -i "s/$o_name/$n_name/g" ./$o_name/settings.py
+        sed -i "/s/$o_name/$n_name/g" ./Procfile
+        mv ../$o_name ../$n_name
+        mv $o_name $n_name
+    else
+        echo "Coloque um nome"
+    fi
+}
+
+
+
+main $1 

@@ -1,0 +1,1 @@
+web: gunicorn other.wsgi
