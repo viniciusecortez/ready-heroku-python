@@ -6,7 +6,7 @@ main(){
         local n_name=$1
         sed -i "s/$o_name/$n_name/g" ./manage.py
         sed -i "s/$o_name/$n_name/g" ./$o_name/settings.py
-        sed -i "/s/$o_name/$n_name/g" ./Procfile
+        sed -i "s/$o_name/$n_name/g" ./Procfile
         mv ../$o_name ../$n_name
         mv $o_name $n_name
     else

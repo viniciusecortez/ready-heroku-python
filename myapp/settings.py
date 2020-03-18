@@ -124,3 +124,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MATERIAL_ADMIN_SITE = {
     'HEADER': 'myapp Adm'
 }
+if DEBUG:
+    print("DEBUG mode")
+else:
+    SECURE_SSL_REDIRECT = True
+

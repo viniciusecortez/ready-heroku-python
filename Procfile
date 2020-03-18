@@ -1,1 +1,1 @@
-web: gunicorn other.wsgi
+web: gunicorn myapp.wsgi
